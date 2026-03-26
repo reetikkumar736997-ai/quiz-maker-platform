@@ -9,8 +9,6 @@ Admins can create quizzes, publish shareable links, review submissions, and mana
 ## Live Demo
 
 - Live app: [https://quiz-maker-app-five.vercel.app](https://quiz-maker-app-five.vercel.app)
-- Admin register: [https://quiz-maker-app-five.vercel.app/admin/register](https://quiz-maker-app-five.vercel.app/admin/register)
-- Admin login: [https://quiz-maker-app-five.vercel.app/admin/login](https://quiz-maker-app-five.vercel.app/admin/login)
 
 ## Features
 
