@@ -1,0 +1,28 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="32" fill="#10161D"/>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect x="72" y="72" width="720" height="250" rx="28" fill="#17212B" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="824" y="72" width="384" height="250" rx="28" fill="#17212B" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="72" y="362" width="552" height="286" rx="28" fill="#17212B" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="656" y="362" width="552" height="286" rx="28" fill="#17212B" stroke="rgba(255,255,255,0.08)"/>
+  <text x="112" y="136" fill="#FF9B54" font-family="Trebuchet MS, Arial, sans-serif" font-size="28" letter-spacing="4">QUIZ MAKER PLATFORM</text>
+  <text x="112" y="214" fill="#F5EFE7" font-family="Trebuchet MS, Arial, sans-serif" font-size="68" font-weight="700">Create quizzes,</text>
+  <text x="112" y="288" fill="#F5EFE7" font-family="Trebuchet MS, Arial, sans-serif" font-size="68" font-weight="700">publish links,</text>
+  <text x="112" y="520" fill="#F5EFE7" font-family="Trebuchet MS, Arial, sans-serif" font-size="40" font-weight="700">Admin Dashboard</text>
+  <text x="112" y="570" fill="#BCAE9F" font-family="Georgia, serif" font-size="24">Protected auth, quiz builder, results, explanations, and timer support.</text>
+  <text x="112" y="620" fill="#86D7ED" font-family="Trebuchet MS, Arial, sans-serif" font-size="24">Next.js  •  Prisma  •  PostgreSQL  •  Vercel</text>
+  <text x="864" y="132" fill="#FF9B54" font-family="Trebuchet MS, Arial, sans-serif" font-size="24" letter-spacing="4">PUBLIC QUIZ</text>
+  <text x="864" y="198" fill="#F5EFE7" font-family="Trebuchet MS, Arial, sans-serif" font-size="56" font-weight="700">Timed attempt</text>
+  <rect x="864" y="230" width="264" height="64" rx="20" fill="#21493D" stroke="#3E8A67"/>
+  <text x="892" y="272" fill="#9FE3BA" font-family="Trebuchet MS, Arial, sans-serif" font-size="22" font-weight="700">TIME LEFT  02:39</text>
+  <text x="696" y="520" fill="#F5EFE7" font-family="Trebuchet MS, Arial, sans-serif" font-size="40" font-weight="700">Instant Results</text>
+  <text x="696" y="570" fill="#BCAE9F" font-family="Georgia, serif" font-size="24">Answer review with correct and incorrect highlights plus explanations.</text>
+  <rect x="696" y="604" width="180" height="16" rx="8" fill="#2A3642"/>
+  <rect x="696" y="604" width="124" height="16" rx="8" fill="#FF9B54"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#516673" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#8D7567" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+</svg>

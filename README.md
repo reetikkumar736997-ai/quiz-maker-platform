@@ -2,6 +2,8 @@
 
 Full-stack quiz platform built with Next.js, Prisma, PostgreSQL, and Vercel.
 
+![Quiz Maker Preview](./public/github-preview.svg)
+
 Admins can create quizzes, publish shareable links, review submissions, and manage results from a protected dashboard. Participants can open the public link, enter their name, attempt timed quizzes, and see instant results with explanations.
 
 ## Live Demo
