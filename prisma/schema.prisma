@@ -1,0 +1,87 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum QuizStatus {
+  DRAFT
+  PUBLISHED
+}
+
+enum QuestionType {
+  MCQ_SINGLE
+  TEXT
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model Quiz {
+  id              String      @id @default(cuid())
+  title           String
+  description     String?
+  slug            String      @unique
+  status          QuizStatus  @default(DRAFT)
+  durationMinutes Int?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  questions       Question[]
+  attempts        Attempt[]
+}
+
+model Question {
+  id          String       @id @default(cuid())
+  quizId      String
+  prompt      String
+  type        QuestionType
+  order       Int
+  explanation String?
+  correctText String?
+  quiz        Quiz         @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  choices     Choice[]
+  answers     AttemptAnswer[]
+}
+
+model Choice {
+  id         String   @id @default(cuid())
+  questionId String
+  text       String
+  isCorrect  Boolean  @default(false)
+  order      Int
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  answers    AttemptAnswer[]
+}
+
+model Attempt {
+  id              String          @id @default(cuid())
+  quizId          String
+  participantName String
+  submittedAt     DateTime        @default(now())
+  elapsedSeconds  Int?
+  totalScore      Int
+  totalQuestions  Int
+  quiz            Quiz            @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  answers         AttemptAnswer[]
+}
+
+model AttemptAnswer {
+  id               String    @id @default(cuid())
+  attemptId        String
+  questionId       String
+  selectedChoiceId String?
+  textAnswer       String?
+  isCorrect        Boolean
+  awardedScore     Int
+  attempt          Attempt   @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  question         Question  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  selectedChoice   Choice?   @relation(fields: [selectedChoiceId], references: [id], onDelete: SetNull)
+}
